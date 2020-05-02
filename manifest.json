@@ -1,0 +1,14 @@
+{
+  "name": "Hawthorne Supply Co Sold Out",
+  "version": "1.0",
+  "description": "Mark which Hawthorne Supply Co search results are sold out",
+  "manifest_version": 2,
+  "permissions": ["https://www.hawthornesupplyco.com/", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.hawthornesupplyco.com/search-results*"],
+      "run_at": "document_idle",
+      "js": ["content.js"]
+    }
+  ]
+}
